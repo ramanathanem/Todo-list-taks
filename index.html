@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Operation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body onload="readAll()">
+    <div class="container">
+        <div class="form_container">
+            <form class="create_form" onsubmit="event.preventDefault(); add();" style="display: none;">
+                <input type="text" class="name" placeholder="Enter name" required />
+                <input type="email" class="email" placeholder="Enter email" required />
+                <button type="submit">Create</button>
+            </form>
+            <form class="update_form" onsubmit="event.preventDefault(); update();" style="display: none;">
+                <input type="hidden" class="id" />
+                <input type="text" class="uname" placeholder="Enter name" required/>
+                <input type="email" class="uemail" placeholder="Enter email" required />
+                <button type="submit">Update</button>
+            </form>
+            <div class="add_div">
+                <button type="button" onclick="createAll()">Add +</button>
+            </div>
+            <table border="3">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody class="data_table">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
